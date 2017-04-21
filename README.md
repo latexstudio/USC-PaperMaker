@@ -1,4 +1,5 @@
 ﻿# 简介 
+* [什么是LaTeX？](http://baike.baidu.com/link?url=hM-s1PsjuKHD_k_MpAaI5ZgwwrMtbs8mcrlxSemL2DBcxarGaGt5LWCdPbNBjLtFHHqV9z_EBe1YgNaw-bRVE_)。
 * USC-PaperMaker是南华大学毕业设计的LaTeX论文模板，基本上已经搞定了所有事情，仅仅需要同学们把自己的内容填入即可，而不必纠结于论文的格式与排版。
 * 至于参考文献的管理以及bib文献库的创建，可以参考[这个教程](http://www.jianshu.com/p/68f0e4134b04)。
 * 本模板几乎全部涵盖了本科硕士博士的论文排版。
@@ -13,7 +14,7 @@
 -----
 
 # 用法
-详见Wiki，目前正在编写中，可以持续关注。或者会LaTeX的同学可以先下载来琢磨一下
+详见Wiki，目前正在编写中，可以持续关注。或者会LaTeX的同学可以先下载来琢磨一下。
 
 -----
 
