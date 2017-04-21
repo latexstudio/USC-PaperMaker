@@ -1,4 +1,5 @@
 ![logo](https://github.com/mattholy/USC-PaperMaker/blob/master/logo.png)
+![star](https://github.com/mattholy/USC-PaperMaker/blob/master/s.png)
 
 # 简介 
 * [什么是LaTeX？](http://baike.baidu.com/link?url=hM-s1PsjuKHD_k_MpAaI5ZgwwrMtbs8mcrlxSemL2DBcxarGaGt5LWCdPbNBjLtFHHqV9z_EBe1YgNaw-bRVE_)。
