@@ -1,36 +1,8 @@
-%%
-%% This is file `uestcthesis.cls',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% uestcthesis.dtx  (with options: `class')
-%% 
-%% This is a generated file.
-%% 
-%%  Copyright 2012-2016 Shi Fujun <shifujun@foxmail.com>
-%% 
-%%  This work may be distributed and/or modified under the
-%%  conditions of the LaTeX Project Public License, either version 1.3
-%%  of this license or (at your option) any later version.
-%%  The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%%  and version 1.3 or later is part of all distributions of LaTeX
-%%  version 2005/12/01 or later.
-%% 
-%%  This work has the LPPL maintenance status `maintained'.
-%% 
-%%  The Current Maintainer of this work is Shi Fujun <shifujun@foxmail.com>.
-%% 
-%%  This work consists of the files uestcthesis.dtx, uestcthesis.ins
-%%  and the derived file uestcthesis.cls, uestcthesis.bst and beamerthemeuestcthesis.sty.
-%%  Other files in this work's package are belongs to the respective owners.
-%% 
-
 \NeedsTeXFormat{LaTeX2e}[2011/06/27]
 \ProvidesClass{uestcthesis}
     [2016/10/22 v1.2.8 UESTC thesis class]
 \LoadClass[fontset = windowsold,cs4size,UTF8,fancyhdr,hyperref,fntef,openany]{ctexbook}[2011/03/11]
+
 \def\CTEX@contentsname{目录}
 \def\CTEX@figurename{图}
 \def\CTEX@tablename{表}
@@ -56,7 +28,7 @@
 \newcommand{\degree@uestcthesis}{bachelor}
 \newcommand{\multibibflag@uestcthesis}{}
 
-\newcommand{\thesisname@degree}{南华大学学士学位论文}
+\newcommand{\thesisname@degree}{南华大学核科学技术学院2017届本科毕业论文}
 
 \newcommand{\chapternumberformat@uestcthesis}{\arabic{chapter}}
 \newcommand{\publicationsname@degree}{}%为bachelor选项下使用english选项而设。
@@ -97,14 +69,20 @@
 \newcommand{\chapternumberformat@uestcthesis}{\chinese{chapter}}
 }
 \newcommand{\tocname@uestcthesis}{目录}
-\newcommand{\contentsname@uestcthesis}{目\enspace 录}
+\newcommand{\contentsname@uestcthesis}{目\enspace录}
 \newcommand{\chaptername@uestcthesis}{
-\CTEXsetup[ name={第,章},
+\CTEXsetup[ name={,、},%章节号格式
             number={\chapternumberformat@uestcthesis}
             ]{chapter}
+\CTEXsetup[ name={,、},%章节号格式
+            ]{section}
+\CTEXsetup[ name={,、},%章节号格式
+            ]{subsection}
+\CTEXsetup[ name={,、},%章节号格式
+            ]{subsubsection}
             }
 \newcommand{\chaptermarkfix@uestcthesis}{
-\renewcommand{\chaptermark}[1]{\markboth{第\chapternumberformat@uestcthesis章~##1 }{}}
+\renewcommand{\chaptermark}[1]{\markboth{\chapternumberformat@uestcthesis~##1 }{}}
 }
 \newcommand{\acknowledgementsname@uestcthesis}{致\enspace 谢}
 \newcommand{\acknowledgementsmarkname@uestcthesis}{致谢}
@@ -191,10 +169,10 @@
 \ProcessOptions\relax
 \ifdefstring{\degree@uestcthesis}{bachelor}{
 \RequirePackage[a4paper,headheight=12.65pt,headsep=5.65mm,centering,
-                top=3.64cm,left=3cm]{geometry}
+                top=2.5cm,left=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
 }{
 \RequirePackage[a4paper,headheight=12.65pt,headsep=6.4mm,centering,
-                top=3.14cm,left=3cm]{geometry}
+				top=2.5cm,left=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
 }
 \linespread{1.391}
 \parskip=0bp plus 10bp minus 1bp
@@ -480,25 +458,25 @@
 }%\newcmds@uestcthesis定义完毕
 \newcommand{\mainmatterfancy}{
 \fancyhf{}
-\fancyhead[OC]{\zihao{5}\leftmark}%奇数页居中打印章标题
+\fancyhead[OC]{\songti\zihao{5}南华大学核科学技术学院2017届本科毕业论文}%奇数页居中打印章标题
 \ifdef{\onlychapters@uestcthesis}{}{%onlychapters选项效果，在pdf元信息中去除学校信息。
 \fancyhead[EC]{\zihao{5}\thesisname@degree}%偶数页居中打印论文全名
 }%onlychapters选项效果END
-\fancyfoot[C]{\zihao{-5}\thepage}%页码位于页面底端，居中打印。
+\fancyfoot[C]{\songti\zihao{5}第\thepage页，共\pageref{LastPage}页}%页码位于页面底端，居中打印。
 }
 \newcommand{\Cabstractfancy}{%
 \fancyhf{}%
-\fancyhead[C]{\zihao{5}摘要}%页眉居中打印“摘要”
+\fancyhead[C]{\songti\zihao{5}南华大学核科学技术学院2017届本科毕业论文}%页眉居中打印“摘要”
 \fancyfoot[C]{\zihao{-5}\thepage}%页码位于页面底端，居中打印。
 }
 \newcommand{\Eabstractfancy}{
 \fancyhf{}%
-\fancyhead[C]{\zihao{5}ABSTRACT}%页眉居中打印“ABSTRACT”
+\fancyhead[C]{\songti\zihao{5}南华大学核科学技术学院2017届本科毕业论文}%页眉居中打印“ABSTRACT”
 \fancyfoot[C]{\zihao{-5}\thepage}%页码位于页面底端，居中打印。
 }
 \newcommand{\tocmatterfancy}{
 \fancyhf{}
-\fancyhead[C]{\zihao{5}\tocname@uestcthesis}%页眉居中打印“目　录”
+\fancyhead[C]{\songti\zihao{5}南华大学核科学技术学院2017届本科毕业论文}%页眉居中打印“目　录”
 \fancyfoot[C]{\zihao{-5}\thepage}%页码位于页面底端，居中打印。
 }
 \newcommand{\glossarymatterfancy}{%定义主要符号表版式设置
@@ -513,7 +491,7 @@
 }
 \newcommand{\Cabstractmatter}{
 \setcounter{page}{1}%页码重置为1
-\pagenumbering{Roman}%页码使用大写罗马数字
+\pagenumbering{roman}%页码使用罗马数字
 \pagestyle{fancy}
 \Cabstractfancy
 \fancypagestyle{plain}{\Cabstractfancy}
@@ -572,23 +550,25 @@
 \def\CTEX@chaptername{\CTEX@chapter@nameformat {\CTEX@prechapter {\csname group_begin: \endcsname \CTEX@chapter@numberformat \CTEX@thechapter \csname group_end: \endcsname }\CTEX@postchapter }\CTEX@chapter@aftername }
 \def\@makechapterhead #1{\rule{0pt}{\CTEX@chapter@beforeskip}\par{\normalfont \parindent \CTEX@chapter@indent \CTEX@chapter@format \ifnum \c@secnumdepth >\m@ne \if@mainmatter \CTEX@chaptername \fi \fi \interlinepenalty \@M \CTEX@chapter@titleformat #1\par \nobreak \vskip \CTEX@chapter@afterskip }}
 \def\@makeschapterhead #1{\rule{0pt}{\CTEX@chapter@beforeskip}\par{\normalfont \parindent \CTEX@chapter@indent \CTEX@chapter@format \interlinepenalty \@M \CTEX@chapter@titleformat #1\par \nobreak \vskip \CTEX@chapter@afterskip }}
+
+%章节标号
 \ifdefstring{\degree@uestcthesis}{bachelor}{
 \CTEXsetup[ nameformat={},
-            numberformat={},
+            numberformat={\bf},
             titleformat={},
             aftername={\enspace},
             beforeskip={30bp},
             afterskip={30bp plus 6bp minus 6bp},
-            format={\heiti\zihao{-3}\centering\baselineskip=20bp},
+            format={\heiti\zihao{3}\bf\centering\baselineskip=20bp},
             ]{chapter}
 }{
 \CTEXsetup[ nameformat={},
-            numberformat={},
+            numberformat={\bf},
             titleformat={},
             aftername={\enspace},
             beforeskip={16bp},
             afterskip={18bp plus 3.6bp minus 3.6bp},
-            format={\heiti\zihao{-3}\centering\baselineskip=20bp},
+            format={\heiti\zihao{3}\bf\centering\baselineskip=20bp},
             ]{chapter}
 }
 \ifdefstring{\degree@uestcthesis}{bachelor}{
@@ -596,39 +576,39 @@
             beforeskip={18bp},
             afterskip={18bp plus 3.6bp minus 3.6bp},
             numberformat={\bf},
-            format={\heiti\zihao{4}\flushleft\baselineskip=20bp}]{section}
+            format={\heiti\zihao{-3}\bf\flushleft\baselineskip=20bp}]{section}
 }{
 \CTEXsetup[ aftername={\enspace},
             beforeskip={18bp},
             afterskip={6bp plus 1.2bp minus 1.2bp},
             numberformat={\bf},
-            format={\heiti\zihao{4}\flushleft\baselineskip=20bp}]{section}
+            format={\heiti\zihao{-3}\bf\flushleft\baselineskip=20bp}]{section}
 }
 \ifdefstring{\degree@uestcthesis}{bachelor}{
 \CTEXsetup[ aftername={\enspace},
             beforeskip={12bp},
             afterskip={12bp plus 2.4bp minus 2.4bp},
             numberformat={\bf},
-            format={\heiti\zihao{4}\flushleft\baselineskip=20bp}]{subsection}
+            format={\heiti\zihao{4}\bf\flushleft\baselineskip=20bp}]{subsection}
 }{
 \CTEXsetup[ aftername={\enspace},
             beforeskip={12bp},
             afterskip={6bp plus 1.2bp minus 1.2bp},
             numberformat={\bf},
-            format={\heiti\zihao{4}\flushleft\baselineskip=20bp}]{subsection}
+            format={\heiti\zihao{4}\bf\flushleft\baselineskip=20bp}]{subsection}
 }
 \ifdefstring{\degree@uestcthesis}{bachelor}{
 \CTEXsetup[ aftername={\enspace},
             beforeskip={6bp},
             afterskip={6bp plus 1.2bp minus 1.2bp},
             numberformat={\bf},
-            format={\heiti\zihao{-4}\flushleft\baselineskip=20bp}]{subsubsection}
+            format={\heiti\zihao{-4}\bf\flushleft\baselineskip=20bp}]{subsubsection}
 }{
 \CTEXsetup[ aftername={\enspace},
             beforeskip={12bp},
             afterskip={6bp plus 1.2bp minus 1.2bp},
             numberformat={\bf},
-            format={\heiti\zihao{-4}\flushleft\baselineskip=20bp}]{subsubsection}
+            format={\heiti\zihao{-4}\bf\flushleft\baselineskip=20bp}]{subsubsection}
 }
 \newenvironment{Cabstract}[5]{
 \newcommand{\@ckeywords}{
@@ -648,10 +628,12 @@
 \hypersetup{%
 pdfkeywords={\@pdfckeywords}%在pdf元信息中加入关键字
 }
-\chapter*{摘\enspace 要}%插入不带章号的摘要
+
+\chapter*{\@title}%插入论文题目
+\section*{\songti\zihao{-4}\bf\textbf{摘要：}}
 }
 {\\[3mm]%摘要后换行空出3mm
-{\textbf{关键词：}}\parbox[t]{378.59134pt}{\@ckeywords}%插入关键词
+{\songti\zihao{-4}\bf\textbf{关键词：}}\parbox[t]{378.59134pt}{\@ckeywords}%插入关键词
 }
 \newenvironment{Eabstract}[5]{
 \newcommand{\@ekeywords}{
@@ -661,11 +643,13 @@ pdfkeywords={\@pdfckeywords}%在pdf元信息中加入关键字
 \ifthenelse{\equal{#4}{}}{}{, #4}%
 \ifthenelse{\equal{#5}{}}{}{, #5}%
 }
+
 \Eabstractmatter%设置英文摘要版式
-\chapter*{\bf ABSTRACT}%插入不带章号的ABSTRACT
+\chapter*{\Etitle}%插入英文标题
+\section*{\zihao{-4}\bf\textbf{ABSTRACT:}}
 }
 {\\[3mm]%摘要后换行空出3mm
-{\bf Keywords:\nbs}\parbox[t]{367.97586pt}{\@ekeywords}%插入关键词
+{\zihao{-4}\bf Keywords:\nbs}\parbox[t]{367.97586pt}{\@ekeywords}%插入关键词
 }
 \CTEXoptions[contentsname={\protect\heiti\protect\zihao{-3}\contentsname@uestcthesis}]
 \setcounter{tocdepth}{3}
@@ -930,10 +914,10 @@ pdfdisplaydoctitle=true
 \insertlot%插入表目录
 \clearpage{\pagestyle{empty}\cleardoublepage}%目录之后另起一页，这样无论目录后有没有主要符号表，主要符号表的页眉设置命令都会应用到下一页。
 \acronymnamematter%设置缩略词表版式
-\printacronyms[nogroupskip,style=acronymwithtranslation]
+%\printacronyms[nogroupskip,style=acronymwithtranslation]%插入缩略词表
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \glossarymatter%设置主要符号表版式。
-\printglossary[nogroupskip,style=custom-long3colheader]%插入主要符号表
+%\printglossary[nogroupskip,style=custom-long3colheader]%插入主要符号表
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \mainmatter%修正主要符号表版式，这里是受目录版式的影响，必须在此加入\mainmatter。
 }%
@@ -1024,6 +1008,8 @@ pdfdisplaydoctitle=true
 
 \renewcommand{\CTEX@figurename}{图}
 \renewcommand{\CTEX@tablename}{表}
+
+%\setcounter{chapter}{0}
 
 \include{contents/translation}
 }
