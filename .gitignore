@@ -1,47 +1,60 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+*.acn
+*.acr
+*.alg
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.fdb_latexmk
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.maf
+*.mtc
+*.mtc0
+*.nav
+*.nlo
+*.out
+*.pdfsync
+*.ps
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdy
+*.tdo
 
-# Folder config file
-Desktop.ini
+2013年7月修订的研究生院规范撰写范例/simsun.ttc
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+2013年7月修订的研究生院规范撰写范例/simhei.ttf
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+2013年7月修订的研究生院规范撰写范例/compile.sh
 
-# Windows shortcuts
-*.lnk
+2013年7月修订的研究生院规范撰写范例/clean.sh
 
-# =========================
-# Operating System Files
-# =========================
+*.sh
 
-# OSX
-# =========================
+source/simhei.ttf
 
-.DS_Store
-.AppleDouble
-.LSOverride
+source/simsun.ttc
 
-# Thumbnails
-._*
+source/beamerthemeuestcthesis.sty
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
+source/packagecheck.tex
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+source/uestcthesis.bst
+
+source/uestcthesis.cls
+
+source/uestcthesis.pdf
+
+2013年7月修订的研究生院规范撰写范例/example.pdf
+
+test
