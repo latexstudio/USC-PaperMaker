@@ -6,7 +6,7 @@
 * 所有文件均为UTF-8 无 BOM 编码格式。
 * 本模板原作者是电子科技大学的[shifujun](https://github.com/shifujun/UESTCthesis)，经作者许可，在次基础上制作南华大学的版本，针对南华大学的格式做了一些调整。
 
-###授权：
+### 授权：
 
 ![授权](https://github.com/mattholy/USC-PaperMaker/blob/master/right.png)
 
